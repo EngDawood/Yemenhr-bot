@@ -1,0 +1,9 @@
+aiohttp
+colorlog
+python-dotenv
+python-socks
+telethon
+tortoise-orm
+typing_extensions
+yarl
+aerich
