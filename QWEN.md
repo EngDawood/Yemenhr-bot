@@ -75,11 +75,26 @@ The bot's username is @Yemenhrbot and there's a public channel at https://t.me/h
 
 ### Installation
 ```bash
-# Install dependencies (using pip or other package manager)
-pip install -e .
+# Install dependencies using UV (modern Python package manager)
+uv pip install -e .
 
-# Or if using uv.lock
-pip install --no-deps -e .
+# Or if using uv.lock for reproducible builds
+uv sync
+```
+
+### Dependency Management with UV
+```bash
+# Add new dependencies
+uv add package-name
+
+# Remove dependencies
+uv remove package-name
+
+# Update lockfile
+uv lock
+
+# Install from requirements.txt (if it exists)
+uv pip install -r requirements.txt
 ```
 
 ### Configuration

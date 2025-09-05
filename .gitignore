@@ -182,6 +182,9 @@ venv.bak/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+yemenhrbot.egg-info/
+.aerich/
+aerich.ini
 
 # Pyre type checker
 .pyre/
@@ -244,3 +247,8 @@ docker-compose*.yaml
 .version
 *workspace
 .vscode/
+# gemini-cli settings
+.gemini/
+
+# GitHub App credentials
+gha-creds-*.json
