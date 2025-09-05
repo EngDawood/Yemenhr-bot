@@ -2,5 +2,5 @@ services:
   - type: worker
     name: yemen-jobs-rss
     env: python
-    buildCommand: "pip install uv && uv pip install -e ."
+    buildCommand: "uv pip sync pyproject.toml"
     startCommand: "python telegramRSSbot.py"
