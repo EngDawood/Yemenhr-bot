@@ -1,0 +1,6 @@
+services:
+  - type: worker
+    name: yemen-jobs-rss
+    env: python
+    buildCommand: "pip install uv && uv pip install -e ."
+    startCommand: "python telegramRSSbot.py"
