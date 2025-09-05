@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-#  RSS to Telegram Bot
-#  Copyright (C) 2024  Rongrong <i@rong.moe>
+#  YemenHR to Telegram Bot
+#  Copyright (C) 2024  EngDawood <dawood.2.2.2@gmail.com>
 #
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as
@@ -25,7 +25,7 @@ PROJ_ROOT = Path(__file__).parent
 
 version = re.search(r"""__version__ *= *['"]([^'"]+)['"]""", (PROJ_ROOT / "src/version.py").read_text())[1]
 
-replacePackagePath = partial(re.compile(r'^src').sub, 'rsstt')
+replacePackagePath = partial(re.compile(r'^src').sub, 'yemenhrbot')
 
 # DB migrations are not Python packages, but they should also be included in the package
 source_packages = find_packages(PROJ_ROOT, include=['src', 'src.*'])
@@ -39,5 +39,5 @@ proj_packages = [replacePackagePath(name) for name in source_packages + db_migra
 setup(
     version=version,
     packages=proj_packages,
-    package_dir={'rsstt': 'src'},
+    package_dir={'yemenhrbot': 'src'},
 )
